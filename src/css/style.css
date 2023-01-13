@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Primary*/    
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    
+    /* Accent*/    
+    --Blue: hsl(248, 32%, 49%);
+    
+    /* Neutral*/    
+    --Dark-Blue: hsl(249, 10%, 26%); 
+    --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    font-size: 16px;
+    padding: 20px;
+    background-image: url("../images/bg-intro-mobile.png");
+    background-color: var(--Red);
+}
+
+article {
+    margin-block-start: 10vh;
+    text-align: center;
+    padding: 0 20px;
+    color: white;
+}
+
+article > h1 {
+    padding: 0 20px;
+    font-weight: 700;
+}
+article > p {
+    padding: 20px 0 40px 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+main > div {
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-weight: 400;
+    text-align: center;
+    background-color: var(--Blue);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.39);    
+}
+
+main > div > p {
+    font-size: 1rem;
+    padding: 0 40px;
+}
+
+main > div > p > span {
+    font-weight: 600;
+}
+
+main > form {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 7px 3px rgba(0, 0, 0, 0.233);
+    padding: 30px;
+    min-width: 350px;
+}
+
+main > form > section.input{
+    position: relative;
+    margin-bottom: 30px;
+}   
+
+main > form > section.input > input {
+    font-weight: 700;
+    text-indent: 10px;
+    color: var(--Dark-Blue);
+    border: 1px solid var(--Grayish-Blue);
+    border-radius: 5px;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    padding: 10px;
+}   
+
+main > form > section.input > input:focus-within {
+    border: 1px solid var(--Dark-Blue);
+} 
+
+main > form > section.input > input.active {
+    border: 2px solid var(--Red);
+    color: var(--Red);
+}   
+
+main > form > section.input > img {
+    display: none;
+} 
+
+main > form > section.input > img.active {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 6%;
+}   
+
+main > form > section.input > span.error {
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 6%;
+    padding: 5px 10px;
+    font-size: .8rem;
+    color: var(--Red);
+    font-weight: 500;
+}   
+
+main > form > section.input > span.error.active {
+    display: block;
+}   
+
+main > form > button.btn {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--Green);
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin-top: 35px;
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.295);
+}
+
+main > form > button.btn:hover {    
+    opacity: .9;
+}
+
+main > form > div {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+main > form > div > small {    
+    color: var(--Grayish-Blue);
+    font-weight: 400;
+}
+
+main > form > div > small > span {    
+    color: var(--Red);
+    font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-image: url("../images/bg-intro-desktop.png");
+    }
+    article {
+        margin-block-start: 10vh;
+        text-align: left;
+        max-width: 550px;
+        padding: 0 30px;
+        margin-inline-end: 30px;
+        color: white;
+    }    
+    article > h1 {
+        font-size: 3rem;
+        padding: 0;
+        font-weight: 700;
+    }
+    article > p {
+        padding: 20px 0 40px 0;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    main > form {
+        width: 500px;
+    }
+    main > form > div > small {    
+        font-size: .7rem;
+    }
+}
